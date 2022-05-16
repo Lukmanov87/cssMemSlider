@@ -1,0 +1,96 @@
+body {
+  background: #000;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.main {
+  background-color: #000;
+}
+
+.wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+.slider {
+  margin: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.slider__slides {
+  width: 400%;
+  display: flex;
+}
+
+.slider__navigation {
+  padding-left: 4.63rem;
+  display: flex;
+}
+.bar {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #ddd;
+  opacity: 0.5;
+  border-radius: 0.6rem;
+  transition: all 0.4s ease;
+}
+.bar:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+input[name="season"] {
+  visibility: hidden;
+}
+
+.slide {
+  width: 25%;
+  transition: all 0.6s ease;
+}
+.slide img {
+  width: 40rem;
+  height: 30rem;
+}
+.slide__title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-transform: uppercase;  
+}
+
+#summer:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#autumn:checked ~ .s1 {
+  margin-left: -25%;
+}
+
+#winter:checked ~ .s1 {
+  margin-left: -50%;
+}
+
+#spring:checked ~ .s1 {
+  margin-left: -75%;
+}
